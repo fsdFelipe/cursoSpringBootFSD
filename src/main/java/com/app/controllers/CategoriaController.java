@@ -22,6 +22,7 @@ public class CategoriaController {
 		return "Controlador REST OK !";
 	}
 	
+	@GetMapping("/categorias/{id}")
 	public ResponseEntity<?> buscar(@PathVariable Integer id){
 		Categoria obj = categoriaService.buscar(id);
 		return ResponseEntity.ok().body(obj);
